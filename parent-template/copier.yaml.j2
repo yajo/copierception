@@ -1,0 +1,13 @@
+[# This will be the copier.yaml for child templates #]
+_subdirectory: template
+
+project_name:
+    type: str
+
+[% if python %]
+build_system:
+    type: str
+    choices:
+        - setuptools
+        - poetry
+[% endif %]

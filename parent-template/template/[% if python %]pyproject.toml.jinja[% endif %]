@@ -1,0 +1,15 @@
+[build-system]
+{% if build_system == "setuptools" %}
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+{% elif build_system == "poetry" %}
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
+{% endif %}
+
+[project]
+name = "{{ project_name }}"
+version = "0.0.1"
+dependencies = [
+    "copier", # Even deeper!
+]

@@ -1,0 +1,17 @@
+# This is where the parent template lives
+_subdirectory: parent-template
+
+# Separate settings for the parent template not to collide with the child one
+_templates_suffix: .j2
+_envops:
+  block_end_string: "%]"
+  block_start_string: "[%"
+  comment_end_string: "#]"
+  comment_start_string: "[#"
+  keep_trailing_newline: true
+  variable_end_string: "]]"
+  variable_start_string: "[["
+
+# Some simple questions
+python: true
+pre_commit: true
